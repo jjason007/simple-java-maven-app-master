@@ -31,6 +31,8 @@ jobs:
             - v1-dependencies-
 
       - run: mvn verify
+      - store_artifacts:
+        path: *.jar
 
       - save_cache:
           paths:
