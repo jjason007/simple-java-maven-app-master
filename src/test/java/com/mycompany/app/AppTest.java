@@ -2,6 +2,8 @@ package com.mycompany.app;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.concurrent.TimeUnit;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.After;
@@ -24,6 +26,7 @@ public class AppTest
     public void testAppConstructor() {
         try {
             new App();
+            TimeUnit.SECONDS.sleep(2);
         } catch (Exception e) {
             fail("Construction failed.");
         }

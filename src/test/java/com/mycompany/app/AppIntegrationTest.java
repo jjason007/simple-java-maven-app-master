@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
@@ -22,6 +23,7 @@ public class AppIntegrationTest {
     public void testAppConstructor() {
         try {
             new App();
+            TimeUnit.SECONDS.sleep(2);
         } catch (Exception e) {
             fail("Construction failed.");
         }
